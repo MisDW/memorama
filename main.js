@@ -214,8 +214,10 @@ function show_ganador(a) {
     capa_negro.style.display="block";
     cont_btn.style.display="block"
     cont_btn.innerHTML=`
-    <span>¡You Win!</span><br>
-    <input type="button" value="Restart" id="btn_start" onclick="start(1)">
+    <div class="contenedor_mensaje">
+        <span>¡You Win!</span><br>
+        <input type="button" value="Restart" id="btn_start" onclick="start(1)">
+    </div>
     `;
     reset_stadistics()
     part_ganadas++;
@@ -227,9 +229,11 @@ function show_perdedor(e) {
     capa_negro.style.display="block";
     cont_btn.style.display="block"
     cont_btn.innerHTML=`
-    <span>¡You Lose!</span><br>
-    <input type="button" value="Restart" id="btn_start" onclick="start(1)">
-    `;
+    <div class="contenedor_mensaje">
+        <span>¡You Lose!</span><br>
+        <input type="button" value="Restart" id="btn_start" onclick="start(1)">
+    </div>
+        `;
     reset_stadistics()
     part_perdidas++;
     document.querySelector(".part_perdidas").innerHTML = `Lose: ${part_perdidas}`

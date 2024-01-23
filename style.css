@@ -53,13 +53,12 @@ body{
 
 .box_game{
     top:10px;
-    max-width:650px;
     background-image:url(img/mesa_01.jpg);
     background-size:cover;
     box-shadow:5px 5px 15px rgba(0, 0, 0, 0.668);
     overflow:hidden;
     border-radius:20px;
-    padding:50px 10px 10px 10px;
+    padding:50px 5px 10px 5px;
     display:grid;
     margin:auto;
     position: relative;
@@ -88,34 +87,31 @@ body{
 .capa_negro{
     content:"";
     display:block;
-    position:absolute;
-    left:0px;
-    right:0px;
-    top:0px;
-    bottom:0px;
+    position:fixed;
+    inset:0px;
     background-color:rgba(0, 0, 0, 0.800);
     z-index:15;
 }
 
 .cont_btn{
-    /* background-color:rgba(0, 0, 0, 0.5); */
-    position: absolute;
-    left:0px;
-    right:0px;
+    background-color:rgba(0, 0, 0, 0.5);
+    position:fixed;
     text-align:center;
-    margin:auto;
     padding:20px;
-    display:block;
+    inset:0px;
+    display:grid;
+    justify-content:center;
+    align-items:center;
     z-index:30;
 }
 
-.cont_btn p{
+.contenedor_mensaje p{
     font:20px;
     color:#ffff;
     margin:15px 0px;
 }
 
-.cont_btn span{
+.contenedor_mensaje span{
     color:#ffff;
     font-size:30px;
     font-family:monospace;
