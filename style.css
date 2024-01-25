@@ -63,7 +63,7 @@ body{
 
     box-shadow: inset red;
     overflow:hidden;
-    border-radius:20px;
+    border-radius:5px;
     padding:50px 10px 10px 10px;
     display:grid;
     margin:auto;
