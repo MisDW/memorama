@@ -211,12 +211,14 @@ function partida_perdida(n_errores) {
 //es pura estilizacion
 function show_ganador(a) {
     capa_negro.style.background="rgba(35, 214, 44, 0.678)";
-    capa_negro.style.display="block";
-    cont_btn.style.display="block"
+    capa_negro.style.display="grid";
+    cont_btn.style.display="grid"
     cont_btn.innerHTML=`
     <div class="contenedor_mensaje">
-        <span>¡You Win!</span><br>
-        <input type="button" value="Restart" id="btn_start" onclick="start(1)">
+        <div class="mensaje">
+            <span>¡You Win!</span><br>
+            <input type="button" value="Restart" id="btn_start" onclick="start(1)">
+        </div>
     </div>
     `;
     reset_stadistics()
@@ -226,12 +228,14 @@ function show_ganador(a) {
 
 function show_perdedor(e) {
     capa_negro.style.background="rgba(170, 13, 13, 0.678)";
-    capa_negro.style.display="block";
-    cont_btn.style.display="block"
+    capa_negro.style.display="grid";
+    cont_btn.style.display="grid"
     cont_btn.innerHTML=`
     <div class="contenedor_mensaje">
-        <span>¡You Lose!</span><br>
-        <input type="button" value="Restart" id="btn_start" onclick="start(1)">
+        <div class="mensaje">
+            <span>¡You Lose!</span><br>
+            <input type="button" value="Restart" id="btn_start" onclick="start(1)">
+        </div>
     </div>
         `;
     reset_stadistics()
@@ -243,6 +247,7 @@ const reset_stadistics = () => {
     errores= 0;
     aciertos= 0;
     old_life = lifes;
+    bd_similitud = []
     stop()
 }
 
